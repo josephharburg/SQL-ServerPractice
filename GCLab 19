@@ -1,0 +1,32 @@
+1. select * from customers;
+
+2. select * from Customers where CustomerID Like('BL%')
+
+3. select TOP(100)* from Customers;
+
+4. select * FROM Customers where PostalCode IN('1010', '3012', '12209', '05023') Order by PostalCode ASC;
+
+5. select * from Orders where ShipRegion IS NOT NULL';
+
+6. select * from Customers Order By Country, City;
+
+7. Insert Into Customers(customerID, CompanyName, ContactName, ContactTitle, Address, City, PostalCode, Country, Phone) VALUES
+('PAREC','Pawnee Government', 'Ron Swanson', 'Parks Director', '510 Illinois St', 'Pawnee', '74058', 'USA', '(918) 555-2658');
+
+8. UPDATE Orders set ShipRegion = 'EuroZone' where ShipCountry = 'france';
+
+9. Delete from [Order Details] where Quantity = 1;
+
+10. select MAX(Quantity) from [Order Details]; , select MIN(Quantity) from [Order Details]; , select AVG(Quantity) from [Order Details]; 
+
+11. select AVG(Quantity) as average from [Order Details] group by OrderID; , select MAX(Quantity) as average from [Order Details] group by OrderID; select MIN(Quantity) as average from [Order Details] group by OrderID;
+
+12. select customerID from Orders where OrderID = 10290; 
+
+13. select * from Orders INNER Join Customers ON orders.CustomerID = Customers.CustomerID;
+
+14. select * from Orders LEFT Join Customers ON orders.CustomerID = Customers.CustomerID;
+
+15. select * from Employees where ReportsTo IS NULL ;
+
+16. select * from Employees where ReportsTo = (select EmployeeId from Employees where FirstName = 'andrew');
