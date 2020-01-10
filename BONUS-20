@@ -1,0 +1,35 @@
+1. select * from customers;
+
+2. select * from customers where City In('london', 'paris');
+
+3. select city from customers where City IS NOT NULL;
+
+4. select FirstName, from employees order by FirstName;
+
+5. No salaries in database.
+
+6. No salaries in database.
+
+7.select * from Employees where Notes like'%BA%';
+
+8.select OrderID, SUM(UnitPrice * Quantity) as Total from [Order Details] group by OrderID;
+
+9.select * from employees where HireDate > '1/1/1994';
+
+10. select FirstName, SUM(DATEPART(yyyy, GETDATE()) - DATEPART(yyyy, HireDate)) as YearsWorking from Employees group by FirstName;
+
+11. select * from Products order by UnitsInStock ASC;   select * from Products order by UnitsInStock Desc; 
+
+12.select * from Products where Unitsinstock < 6 order by UnitsInStock Desc; 
+
+13.select * from Products where Discontinued = 1;
+
+14.select * from Products where ProductName like('%tofu');
+
+15. select ProductName, MAX(UnitPrice) from Products group by ProductName;
+
+16. select * from employees where HireDate > '1/1/1993';
+
+17. select * from Employees where TitleOfCourtesy = 'Ms.' or TitleOfCourtesy = 'Mrs.';
+
+18.select * from Employees where HomePhone like('%(206)%');
